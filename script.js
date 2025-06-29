@@ -45,7 +45,8 @@ const addData=(e)=>{
         gender:gender,
     };
     dataArray.push(addDataObject);
-    localStorage.setItem("data", JSON.stringify(dataArray));
+    let localadddata = localStorage.getItem("data");
+
     showData();
     return true;
   }
