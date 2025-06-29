@@ -70,7 +70,8 @@ const Validation = (e) => {
 
 
 const showData = () => {
-        let todoString = localStorage.getItem("data");
+        let todos = JSON.parse(todoString);
+
         let content = "";
 
         if (todoString == null) {
