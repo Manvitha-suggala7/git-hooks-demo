@@ -45,8 +45,7 @@ const addData=(e)=>{
         gender:gender,
     };
     dataArray.push(addDataObject);
-    let localadddata = localStorage.getItem("data");
-
+    localStorage.setItem("data", JSON.stringify(dataArray));
     showData();
     return true;
   }
@@ -70,8 +69,7 @@ const Validation = (e) => {
 
 
 const showData = () => {
-        let todos = JSON.parse(todoString);
-
+        let todoString = localStorage.getItem("data");
         let content = "";
 
         if (todoString == null) {
